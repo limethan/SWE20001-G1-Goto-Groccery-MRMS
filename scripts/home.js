@@ -33,8 +33,13 @@ setInterval(() => {
 
 
 function isUserLoggedIn() {
-    // Replace with actual login check
-    return Math.random() > 0; // For demo, random login state
+    var loggedin = document.getElementById('sessionLoggedIn').value;
+    if (loggedin == 1)
+    {
+        return true;
+    }
+    return false;
+    //return Math.random() > 0; // For demo, random login state
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function logoutUser() {
-    alert('Logging out...');
+    document.getElementById('sessionLoggedIn').value = 0;
+
+    //alert('Logging out...');
     // Handle logout logic
 }

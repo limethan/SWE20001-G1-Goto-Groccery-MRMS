@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($usr_name == $row["Username"] && $pwd == $row["Password"])
                 {
                     $_SESSION['logged_in'] = true;
-                    header("Location: Main.html");
+                    header("Location: Home.php");
                     exit(); // Terminate the script here after redirect
                 }
                 else 
@@ -100,7 +100,7 @@ $conn->close();
             <button type="submit" class="btn">Login</button>
 
             <div class="login-link">
-                <p> An Admin? <a href="AdminLogin.html">Login here</a></p>
+                <p> An Admin? <a href="AdminLogin.php">Login here</a></p>
             </div>
 
             <div class="register-link">
